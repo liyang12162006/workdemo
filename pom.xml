@@ -35,6 +35,47 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>25.1-jre</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.joda/com.springsource.org.joda.time -->
+    <dependency>
+      <groupId>org.joda</groupId>
+      <artifactId>com.springsource.org.joda.time</artifactId>
+      <version>1.6.0</version>
+    </dependency>
+
+
+    <!--swagger 开始  -->
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>2.2.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>2.2.2</version>
+    </dependency>
+    <!--swagger 结束-->
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.6</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
