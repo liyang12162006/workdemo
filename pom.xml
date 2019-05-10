@@ -47,12 +47,7 @@
       <artifactId>guava</artifactId>
       <version>25.1-jre</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.joda/com.springsource.org.joda.time -->
-    <dependency>
-      <groupId>org.joda</groupId>
-      <artifactId>com.springsource.org.joda.time</artifactId>
-      <version>1.6.0</version>
-    </dependency>
+
 
 
     <!--swagger 开始  -->
@@ -73,6 +68,25 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.6</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.54</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.7</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.2.2</version>
     </dependency>
 
 

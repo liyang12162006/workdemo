@@ -5,9 +5,6 @@ import java.util.Calendar;
 import java.util.Date;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
-import org.joda.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -75,7 +72,7 @@ public class DateFormatUtils {
 
     private final static Logger logger = LoggerFactory.getLogger(DateFormatUtil.class);
 
-    private final static DateTimeZone dateTimeZone = DateTimeZone.getDefault();
+   // private final static DateTimeZone dateTimeZone = DateTimeZone.getDefault();
 
     /**
      * 字符串1990-10-10转换成date
@@ -212,34 +209,34 @@ public class DateFormatUtils {
         return org.apache.commons.lang3.time.DateFormatUtils.format(date, PATTERN_YMONTH_DDAY);
     }
 
+//
+//    /**
+//     * 把时间格式转成Y月M日格式
+//     * @param date
+//     * @return
+//     */
+//    public static String formatIntDate2YD(Integer date) {
+//        final Date tmpDate = DateTime.parse(formatIntDate(date)).toDate();
+//        return DateFormatUtils.formatDate(tmpDate, PATTERN_YMONTH_DDAY);
+//    }
 
-    /**
-     * 把时间格式转成Y月M日格式
-     * @param date
-     * @return
-     */
-    public static String formatIntDate2YD(Integer date) {
-        final Date tmpDate = DateTime.parse(formatIntDate(date)).toDate();
-        return DateFormatUtils.formatDate(tmpDate, PATTERN_YMONTH_DDAY);
-    }
-
-    /**
-     *
-     * @param date YYYYMMDD
-     * @return
-     */
-    public static Date formatIntDate2Date(Integer date){
-        return LocalDate.parse(formatIntDate(date)).toDate();
-    }
-
-    /**
-     *
-     * @param date YYYYMMDD
-     * @return
-     */
-    public static LocalDate formatIntDate2LocalDate(Integer date){
-        return LocalDate.parse(formatIntDate(date));
-    }
+//    /**
+//     *
+//     * @param date YYYYMMDD
+//     * @return
+//     */
+//    public static Date formatIntDate2Date(Integer date){
+//        return LocalDate.parse(formatIntDate(date)).toDate();
+//    }
+//
+//    /**
+//     *
+//     * @param date YYYYMMDD
+//     * @return
+//     */
+//    public static LocalDate formatIntDate2LocalDate(Integer date){
+//        return LocalDate.parse(formatIntDate(date));
+//    }
 
     /**
      * 将字符串格式的时间格式化
@@ -256,23 +253,23 @@ public class DateFormatUtils {
         }
     }
 
-    /**
-     *
-     * @param intDate YYYYMMDD
-     * @return
-     */
-    public static String formatDateYYYY_MM_DD(int intDate) {
-        return formatIntDate2LocalDate(intDate).toString();
-    }
+//    /**
+//     *
+//     * @param intDate YYYYMMDD
+//     * @return
+//     */
+//    public static String formatDateYYYY_MM_DD(int intDate) {
+//        return formatIntDate2LocalDate(intDate).toString();
+//    }
 
 
-    public static String getMonth(Date date) {
-        DateTime dateTime = new DateTime(date);
-        return String.valueOf(dateTime.getMonthOfYear());
-    }
-
-    public static String getDay(Date date) {
-        DateTime dateTime = new DateTime(date);
-        return String.valueOf(dateTime.getDayOfMonth());
-    }
+//    public static String getMonth(Date date) {
+//        DateTime dateTime = new DateTime(date);
+//        return String.valueOf(dateTime.getMonthOfYear());
+//    }
+//
+//    public static String getDay(Date date) {
+//        DateTime dateTime = new DateTime(date);
+//        return String.valueOf(dateTime.getDayOfMonth());
+//    }
 }

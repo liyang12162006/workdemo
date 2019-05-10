@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import org.apache.commons.lang3.StringUtils;
-import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -84,16 +83,16 @@ public class DateUtils {
         return date;
     }
 
-    /**
-     * 获取指定日期的0点时间
-     *
-     * @param date
-     * @return
-     */
-    public static Date getTimesmorning(Date date) {
-        DateTime dateTime = new DateTime(date);
-        return dateTime.withTime(0, 0, 0, 0).toDate();
-    }
+//    /**
+//     * 获取指定日期的0点时间
+//     *
+//     * @param date
+//     * @return
+//     */
+//    public static Date getTimesmorning(Date date) {
+//        DateTime dateTime = new DateTime(date);
+//        return dateTime.withTime(0, 0, 0, 0).toDate();
+//    }
 
     /**
      * 该时间加小时
