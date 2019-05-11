@@ -1,15 +1,29 @@
 server:
   port: 8080
 
+spring:
+  profiles:
+    active: dev
+
+
+logging:
+  level: trace
+---
+#开发环境
+
+spring:
+  profiles: dev
+server:
+  port: 8081
 
 
 
 
 
+---
+##生产环境
+spring:
+  profiles: prod
 
-
-#测试类
-People:
-  name: liyangyang
-  age: 20
-  address: 保定
+server:
+  port: 80
