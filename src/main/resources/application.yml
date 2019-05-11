@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+
+
+
+
+
+
+
+#测试类
+People:
+  name: liyangyang
+  age: 20
+  address: 保定

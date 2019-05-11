@@ -3,6 +3,7 @@ package com.example.workdemo.model;
 import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 /**
  * @author yangyangl
@@ -10,12 +11,9 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class people implements Serializable {
-
-
+@Component
+public class People implements Serializable {
     private static final long serialVersionUID = -151780769592730648L;
-
-
     private String name;
 
     private Integer age;
