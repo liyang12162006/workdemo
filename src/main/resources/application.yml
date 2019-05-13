@@ -1,10 +1,18 @@
 server:
   port: 8080
+  #统一前缀路径
+  servlet:
+    context-path:
 
 spring:
   profiles:
     active: dev
-
+    #项目名称
+  application: workdemo
+    name:
+  jdbc:
+    template:
+      fetch-size:
 
 logging:
   level: trace
