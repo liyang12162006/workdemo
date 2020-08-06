@@ -1,37 +1,9 @@
 server:
-  port: 8080
-  #统一前缀路径
-  servlet:
-    context-path:
-
-spring:
-  profiles:
-    active: dev
-    #项目名称
-  application: workdemo
-    name:
-  jdbc:
-    template:
-      fetch-size:
-
-logging:
-  level: trace
----
-#开发环境
-
-spring:
-  profiles: dev
-server:
-  port: 8081
-
-
-
-
-
----
-##生产环境
-spring:
-  profiles: prod
-
-server:
-  port: 80
+  port: 8088
+  http2:
+    enabled: true
+  undertow:
+    io-threads: 16
+    worker-threads: 256
+    buffer-size: 1024
+    direct-buffers: true
