@@ -1,7 +1,5 @@
 package com.example.suanfa;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 /**
  * @author liyangyang
  * @date 2020/11/10 18:28
@@ -14,7 +12,7 @@ public class MaoPaoSort {
         long now =System.currentTimeMillis();
 
         for (int i = 0; i <100000 ; i++) {
-            int arr[] = { 54, 78, 0, 23, 8, 70, 2, 900, 4561 };
+            int arr[] = { 10237547,10237548,10238320,10237550,10238300,10237551,10237551,10237552,10237553,10237554,10237555,10237556,10237557,10237576,10237577,10237578,10237583,10237584,10238294 };
             //冒泡
             bubbleSort(arr);
 
