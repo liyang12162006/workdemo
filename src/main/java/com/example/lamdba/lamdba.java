@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.lamdba;
 
 import java.util.ArrayList;
 import java.util.List;
