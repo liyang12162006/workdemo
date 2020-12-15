@@ -25,6 +25,8 @@ public class map {
 
         System.out.println(list.toString());
 
+        System.out.println(map2.keySet().contains("id"));
+        System.out.println(map2.values().contains("1111"));
         // convent(list);
         System.out.println("1111---" + list.toString());
 
