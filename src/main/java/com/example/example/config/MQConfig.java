@@ -1,14 +1,7 @@
 package com.example.example.config;
 
-import com.huitongjy.metrics.htmq.MsgReceiveListener;
-import com.huitongjy.metrics.htmq.consumer.HtMqConsumer;
-import com.huitongjy.metrics.htmq.consumer.listener.HtMessageListenerConcurrently;
-import com.huitongjy.statcenter.support.mq.StatCenterConsumerListener;
-import java.util.HashMap;
-import java.util.Map;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -60,35 +53,35 @@ public class MQConfig {
     /**
      * 处理监听器
      */
-    @Bean
-    public StatCenterConsumerListener statCenterConsumerListener() {
-        return new StatCenterConsumerListener();
-    }
-
-    @Bean
-    public HtMessageListenerConcurrently htMessageListenerConcurrently() {
-        HtMessageListenerConcurrently htMessageListenerConcurrently = new HtMessageListenerConcurrently();
-        Map<String, MsgReceiveListener> msgReceiveListenerMap = new HashMap<>(16);
-        msgReceiveListenerMap.put(examStatsTopic, statCenterConsumerListener());
-        msgReceiveListenerMap.put(taskStatsInfoTopic, statCenterConsumerListener());
-        htMessageListenerConcurrently.setMsgReceiveListeners(msgReceiveListenerMap);
-        return htMessageListenerConcurrently;
-    }
-
-    @Bean(initMethod = "init", destroyMethod = "destroy")
-    public HtMqConsumer htMqConsumer() {
-        HtMqConsumer htMqConsumer = new HtMqConsumer();
-        htMqConsumer.setNamesrvAddr(nameServerAddr);
-        htMqConsumer.setMqEnv(mqEnv);
-        htMqConsumer.setConsumerGroup(consumerGroup);
-        htMqConsumer.setMessageModel(messageModel);
-        htMqConsumer.setConsumeThreadMin(consumerThreadMin);
-        htMqConsumer.setConsumeThreadMax(consumerThreadMax);
-        HashMap<String, String> topicTags = new HashMap<>(16);
-        topicTags.put(examStatsTopic, examStatsTag);
-        topicTags.put(taskStatsInfoTopic, taskStatsInfoTag);
-        htMqConsumer.setTopicTags(topicTags);
-        htMqConsumer.setMessageListener(htMessageListenerConcurrently());
-        return htMqConsumer;
-    }
+//    @Bean
+//    public StatCenterConsumerListener statCenterConsumerListener() {
+//        return new StatCenterConsumerListener();
+//    }
+//
+//    @Bean
+//    public HtMessageListenerConcurrently htMessageListenerConcurrently() {
+//        HtMessageListenerConcurrently htMessageListenerConcurrently = new HtMessageListenerConcurrently();
+//        Map<String, MsgReceiveListener> msgReceiveListenerMap = new HashMap<>(16);
+//        msgReceiveListenerMap.put(examStatsTopic, statCenterConsumerListener());
+//        msgReceiveListenerMap.put(taskStatsInfoTopic, statCenterConsumerListener());
+//        htMessageListenerConcurrently.setMsgReceiveListeners(msgReceiveListenerMap);
+//        return htMessageListenerConcurrently;
+//    }
+//
+//    @Bean(initMethod = "init", destroyMethod = "destroy")
+//    public HtMqConsumer htMqConsumer() {
+//        HtMqConsumer htMqConsumer = new HtMqConsumer();
+//        htMqConsumer.setNamesrvAddr(nameServerAddr);
+//        htMqConsumer.setMqEnv(mqEnv);
+//        htMqConsumer.setConsumerGroup(consumerGroup);
+//        htMqConsumer.setMessageModel(messageModel);
+//        htMqConsumer.setConsumeThreadMin(consumerThreadMin);
+//        htMqConsumer.setConsumeThreadMax(consumerThreadMax);
+//        HashMap<String, String> topicTags = new HashMap<>(16);
+//        topicTags.put(examStatsTopic, examStatsTag);
+//        topicTags.put(taskStatsInfoTopic, taskStatsInfoTag);
+//        htMqConsumer.setTopicTags(topicTags);
+//        htMqConsumer.setMessageListener(htMessageListenerConcurrently());
+//        return htMqConsumer;
+//    }
 }
